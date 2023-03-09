@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./multi-step-form.jpg)
+![](./multi-step-form.PNG)
 
 ### Links
 
