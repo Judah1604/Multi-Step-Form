@@ -1,0 +1,660 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+/* line 3, styles.scss */
+* {
+  margin: 0;
+  overflow-x: hidden; }
+
+/* line 8, styles.scss */
+body {
+  background-color: #f0f6ff;
+  font-family: 'Ubuntu', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 16px;
+  height: 100vh; }
+
+/* line 19, styles.scss */
+.card {
+  padding: 15px;
+  background-color: white;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.05);
+  width: 850px;
+  height: 470px;
+  overflow: hidden; }
+  /* line 31, styles.scss */
+  .card aside {
+    position: relative;
+    text-transform: uppercase;
+    height: 100%; }
+    /* line 36, styles.scss */
+    .card aside .sidebar-background {
+      position: absolute;
+      height: 100%; }
+    /* line 41, styles.scss */
+    .card aside .steps {
+      z-index: 2;
+      position: relative;
+      padding: 1.5em 5em 1.5em 2em;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 20px; }
+      /* line 51, styles.scss */
+      .card aside .steps .step-count {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 15px;
+        color: white;
+        width: 100%;
+        font-size: 0.8em; }
+        /* line 60, styles.scss */
+        .card aside .steps .step-count .number {
+          padding: 7px 10px;
+          border: 1px solid white;
+          border-radius: 100%;
+          font-weight: 600;
+          font-size: 0.9em; }
+        /* line 68, styles.scss */
+        .card aside .steps .step-count .text {
+          font-size: 0.8em; }
+          /* line 71, styles.scss */
+          .card aside .steps .step-count .text p {
+            color: #d6d9e6;
+            margin: 0;
+            margin-bottom: 5px; }
+          /* line 77, styles.scss */
+          .card aside .steps .step-count .text h3 {
+            letter-spacing: 1px;
+            margin: 0;
+            font-weight: 500; }
+      /* line 86, styles.scss */
+      .card aside .steps .active .number {
+        background-color: #bfe2fd;
+        color: #02295a;
+        border: none; }
+  /* line 95, styles.scss */
+  .card main {
+    width: 60%;
+    height: 100%;
+    padding-top: 5em; }
+    /* line 100, styles.scss */
+    .card main header {
+      color: #02295a; }
+    /* line 104, styles.scss */
+    .card main p {
+      margin-top: 10px;
+      color: #9699ab; }
+    /* line 109, styles.scss */
+    .card main form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: self-start;
+          -ms-flex-align: self-start;
+              align-items: self-start;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 20px;
+      margin-top: 30px; }
+      /* line 117, styles.scss */
+      .card main form .form-group {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 5px;
+        width: 80%; }
+        /* line 125, styles.scss */
+        .card main form .form-group label {
+          font-weight: 600;
+          color: #02295a;
+          font-size: 0.8em; }
+        /* line 131, styles.scss */
+        .card main form .form-group input {
+          width: 90%;
+          padding: 0.8em;
+          font-family: inherit;
+          font-weight: 600;
+          border: none;
+          border: 1px solid #d6d9e6;
+          border-radius: 5px;
+          color: #02295a;
+          outline: none; }
+          /* line 142, styles.scss */
+          .card main form .form-group input:focus {
+            border: 1px solid #02295a; }
+          /* line 146, styles.scss */
+          .card main form .form-group input::-webkit-input-placeholder {
+            color: #9699ab; }
+          .card main form .form-group input:-ms-input-placeholder {
+            color: #9699ab; }
+          .card main form .form-group input::-ms-input-placeholder {
+            color: #9699ab; }
+          .card main form .form-group input::placeholder {
+            color: #9699ab; }
+        /* line 151, styles.scss */
+        .card main form .form-group .labels {
+          width: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+        /* line 158, styles.scss */
+        .card main form .form-group .warning {
+          font-size: 0.7em;
+          font-weight: 700;
+          color: #ed3548;
+          display: none; }
+        /* line 165, styles.scss */
+        .card main form .form-group .invalid {
+          border: 1px solid #ed3548; }
+    /* line 171, styles.scss */
+    .card main .options {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-top: 3em; }
+      /* line 177, styles.scss */
+      .card main .options .option {
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #d6d9e6;
+        width: 25%; }
+        /* line 183, styles.scss */
+        .card main .options .option:hover {
+          border-color: #02295a; }
+        /* line 187, styles.scss */
+        .card main .options .option .details {
+          margin-top: 3em; }
+          /* line 190, styles.scss */
+          .card main .options .option .details h4 {
+            color: #02295a; }
+          /* line 194, styles.scss */
+          .card main .options .option .details p {
+            margin-top: 5px; }
+      /* line 200, styles.scss */
+      .card main .options .selected {
+        border: 1px solid #02295a;
+        background-color: #f0f6ff; }
+      /* line 205, styles.scss */
+      .card main .options .bonus {
+        display: none;
+        color: #02295a;
+        font-size: 0.8em; }
+    /* line 212, styles.scss */
+    .card main .toggle {
+      margin-top: 2em;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 30px;
+      color: #9699ab;
+      border-radius: 10px;
+      background-color: #fafbff;
+      padding: 15px; }
+      /* line 223, styles.scss */
+      .card main .toggle .toggled {
+        color: #02295a; }
+      /* line 227, styles.scss */
+      .card main .toggle .toggleBtn {
+        background-color: #02295a;
+        width: 40px;
+        height: 20px;
+        border-radius: 30px;
+        position: relative; }
+        /* line 234, styles.scss */
+        .card main .toggle .toggleBtn::before {
+          content: '';
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          left: 4px;
+          top: 4px;
+          background-color: white;
+          border-radius: 100%;
+          -webkit-transition: 0.5s ease;
+          transition: 0.5s ease; }
+      /* line 247, styles.scss */
+      .card main .toggle .monthly,
+      .card main .toggle .yearly {
+        -webkit-transition: 0.3s;
+        transition: 0.3s; }
+      /* line 254, styles.scss */
+      .card main .toggle .yearlyToggle::before {
+        -webkit-transform: translateX(20px);
+                transform: translateX(20px); }
+    /* line 260, styles.scss */
+    .card main .add-ons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      gap: 15px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin-top: 2em;
+      font-size: 0.9em; }
+      /* line 269, styles.scss */
+      .card main .add-ons .add-on {
+        border-radius: 10px;
+        border: 1px solid #dbdbdb;
+        width: 90%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 20px; }
+        /* line 278, styles.scss */
+        .card main .add-ons .add-on .hidden-price {
+          display: none; }
+        /* line 282, styles.scss */
+        .card main .add-ons .add-on:hover input ~ .checkmark {
+          background-color: rgba(0, 0, 0, 0.05); }
+        /* line 286, styles.scss */
+        .card main .add-ons .add-on .checkbox {
+          position: relative;
+          display: block;
+          cursor: pointer;
+          -webkit-user-select: none;
+             -moz-user-select: none;
+              -ms-user-select: none;
+                  user-select: none;
+          width: 20px;
+          height: 20px; }
+          /* line 294, styles.scss */
+          .card main .add-ons .add-on .checkbox input {
+            opacity: 0;
+            height: 0;
+            width: 0;
+            cursor: pointer;
+            position: absolute; }
+            /* line 301, styles.scss */
+            .card main .add-ons .add-on .checkbox input:checked ~ .checkmark {
+              background-color: #473dff;
+              border: none; }
+            /* line 306, styles.scss */
+            .card main .add-ons .add-on .checkbox input:checked ~ .checkmark::after {
+              display: block; }
+          /* line 311, styles.scss */
+          .card main .add-ons .add-on .checkbox .checkmark {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ddd;
+            background-color: white;
+            border-radius: 4px;
+            position: absolute;
+            inset: 0; }
+            /* line 320, styles.scss */
+            .card main .add-ons .add-on .checkbox .checkmark::after {
+              content: '';
+              position: absolute;
+              inset: 0;
+              display: none;
+              background-image: url(../assets/images/icon-checkmark.svg);
+              background-repeat: no-repeat;
+              background-position: center; }
+        /* line 332, styles.scss */
+        .card main .add-ons .add-on .text {
+          width: 50%; }
+        /* line 336, styles.scss */
+        .card main .add-ons .add-on h3 {
+          color: #02295a; }
+        /* line 340, styles.scss */
+        .card main .add-ons .add-on .price {
+          color: #473dff; }
+      /* line 345, styles.scss */
+      .card main .add-ons .addon-selected {
+        border: 1px solid #473dff;
+        background-color: #f0f6ff; }
+    /* line 353, styles.scss */
+    .card main .main-content:nth-child(3) .controlBtns {
+      margin-top: 0.5em; }
+    /* line 358, styles.scss */
+    .card main .summary {
+      margin-top: 2em; }
+      /* line 362, styles.scss */
+      .card main .summary .items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 20px;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #f0f6ff; }
+        /* line 372, styles.scss */
+        .card main .summary .items .additional,
+        .card main .summary .items .item,
+        .card main .summary .items .billing {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          width: 100%; }
+        /* line 381, styles.scss */
+        .card main .summary .items .additionals {
+          width: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          gap: 20px; }
+        /* line 390, styles.scss */
+        .card main .summary .items .billing {
+          border-bottom: 2px solid #d6d9e6;
+          padding-bottom: 1.5em; }
+          /* line 394, styles.scss */
+          .card main .summary .items .billing h4 {
+            color: #02295a;
+            margin-bottom: 3px; }
+          /* line 399, styles.scss */
+          .card main .summary .items .billing .price {
+            color: #02295a;
+            font-weight: bolder; }
+          /* line 404, styles.scss */
+          .card main .summary .items .billing a {
+            font-size: 0.95em;
+            color: #9699ab; }
+            /* line 408, styles.scss */
+            .card main .summary .items .billing a:hover {
+              color: #473dff; }
+        /* line 415, styles.scss */
+        .card main .summary .items .additional .name {
+          font-size: 0.9em;
+          color: #9699ab; }
+        /* line 420, styles.scss */
+        .card main .summary .items .additional .price {
+          color: #02295a;
+          font-size: 0.9em;
+          font-weight: 500; }
+      /* line 428, styles.scss */
+      .card main .summary .total {
+        margin: auto;
+        margin-top: 1.5em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: 90%; }
+        /* line 436, styles.scss */
+        .card main .summary .total .name {
+          color: #9699ab;
+          font-size: 0.9em; }
+        /* line 441, styles.scss */
+        .card main .summary .total h2 {
+          color: #473dff; }
+    /* line 448, styles.scss */
+    .card main .step:nth-child(4) .controlBtns {
+      margin-top: 2.5em; }
+      /* line 451, styles.scss */
+      .card main .step:nth-child(4) .controlBtns .nextBtn {
+        background-color: #473dff; }
+        /* line 454, styles.scss */
+        .card main .step:nth-child(4) .controlBtns .nextBtn:hover {
+          background-color: #867fff; }
+    /* line 461, styles.scss */
+    .card main .thank-you {
+      text-align: center;
+      width: 90%;
+      margin-top: 4em; }
+      /* line 466, styles.scss */
+      .card main .thank-you h1 {
+        color: #02295a;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em; }
+      /* line 472, styles.scss */
+      .card main .thank-you p {
+        line-height: 1.5; }
+    /* line 477, styles.scss */
+    .card main .hiddenBillingPrice {
+      display: none; }
+  /* line 482, styles.scss */
+  .card .visible {
+    display: block !important; }
+  /* line 486, styles.scss */
+  .card .hidden {
+    display: none !important; }
+
+/* line 493, styles.scss */
+footer .attribution {
+  font-size: 11px;
+  text-align: center; }
+/* line 498, styles.scss */
+footer .attribution a {
+  color: #3e52a3; }
+
+@media screen and (max-width: 375px) {
+  /* line 504, styles.scss */
+  body {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: unset; }
+
+  /* line 509, styles.scss */
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: transparent;
+    padding: 0;
+    position: relative; }
+    /* line 515, styles.scss */
+    .card aside {
+      width: 100%;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content; }
+      /* line 519, styles.scss */
+      .card aside img {
+        width: 100%; }
+      /* line 523, styles.scss */
+      .card aside .steps {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        padding: 3em 0 6em 0;
+        margin: auto;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        font-size: 1.1em; }
+        /* line 530, styles.scss */
+        .card aside .steps .text {
+          display: none !important; }
+    /* line 536, styles.scss */
+    .card main {
+      width: 300px;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      padding: 20px;
+      padding-top: 2em;
+      font-size: 0.9em;
+      overflow: hidden;
+      position: absolute;
+      top: 22%;
+      background-color: white;
+      border-radius: 15px;
+      -webkit-box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+              box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1); }
+      /* line 549, styles.scss */
+      .card main header {
+        font-size: 0.9em; }
+      /* line 553, styles.scss */
+      .card main .form-group {
+        width: 100% !important; }
+        /* line 556, styles.scss */
+        .card main .form-group input {
+          width: 90% !important; }
+
+  /* line 563, styles.scss */
+  .cardControl {
+    margin-top: 3em;
+    width: 300px; }
+    /* line 567, styles.scss */
+    .cardControl button {
+      margin: unset; }
+    /* line 571, styles.scss */
+    .cardControl .cardNextBtn {
+      margin-left: auto; }
+
+  /* line 576, styles.scss */
+  .cardNextBtn,
+  .cardPrevBtn {
+    display: block; } }
+/* line 582, styles.scss */
+button {
+  font-family: inherit;
+  padding: 1em 1.7em;
+  background-color: #02295a;
+  color: white;
+  border: none;
+  font-weight: 500;
+  border-radius: 7px; }
+
+/* line 592, styles.scss */
+.controlBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1em; }
+
+/* line 599, styles.scss */
+.prevBtn {
+  background-color: white;
+  margin-right: auto;
+  color: #9699ab;
+  cursor: pointer; }
+
+/* line 606, styles.scss */
+.nextBtn {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer; }
+  /* line 610, styles.scss */
+  .nextBtn:hover {
+    background-color: #08438d; }
+
+/* line 615, styles.scss */
+.cardNextBtn,
+.cardPrevBtn {
+  display: none; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+	margin: 0;
+	overflow-x: hidden;
+}
+
+body {
+	background-color: hsl(217, 100%, 97%);
+	font-family: 'Ubuntu', sans-serif;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	font-size: 16px;
+	height: 100vh;
+}
+
+.card {
+	padding: 15px;
+	background-color: white;
+	border-radius: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.05);
+	width: 850px;
+	height: 470px;
+	overflow: hidden;
+
+	aside {
+		position: relative;
+		text-transform: uppercase;
+		height: 100%;
+
+		.sidebar-background {
+			position: absolute;
+			height: 100%;
+		}
+
+		.steps {
+			z-index: 2;
+			position: relative;
+			padding: 1.5em 5em 1.5em 2em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: 20px;
+
+			.step-count {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				gap: 15px;
+				color: white;
+				width: 100%;
+				font-size: 0.8em;
+
+				.number {
+					padding: 7px 10px;
+					border: 1px solid white;
+					border-radius: 100%;
+					font-weight: 600;
+					font-size: 0.9em;
+				}
+
+				.text {
+					font-size: 0.8em;
+
+					p {
+						color: hsl(229, 24%, 87%);
+						margin: 0;
+						margin-bottom: 5px;
+					}
+
+					h3 {
+						letter-spacing: 1px;
+						margin: 0;
+						font-weight: 500;
+					}
+				}
+			}
+
+			.active {
+				.number {
+					background-color: hsl(206, 94%, 87%);
+					color: hsl(213, 96%, 18%);
+					border: none;
+				}
+			}
+		}
+	}
+
+	main {
+		width: 60%;
+		height: 100%;
+		padding-top: 5em;
+
+		header {
+			color: hsl(213, 96%, 18%);
+		}
+
+		p {
+			margin-top: 10px;
+			color: hsl(231, 11%, 63%);
+		}
+
+		form {
+			display: flex;
+			justify-content: center;
+			align-items: self-start;
+			flex-direction: column;
+			gap: 20px;
+			margin-top: 30px;
+
+			.form-group {
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				flex-direction: column;
+				gap: 5px;
+				width: 80%;
+
+				label {
+					font-weight: 600;
+					color: hsl(213, 96%, 18%);
+					font-size: 0.8em;
+				}
+
+				input {
+					width: 90%;
+					padding: 0.8em;
+					font-family: inherit;
+					font-weight: 600;
+					border: none;
+					border: 1px solid hsl(229, 24%, 87%);
+					border-radius: 5px;
+					color: hsl(213, 96%, 18%);
+					outline: none;
+
+					&:focus {
+						border: 1px solid hsl(213, 96%, 18%);
+					}
+
+					&::placeholder {
+						color: hsl(231, 11%, 63%);
+					}
+				}
+
+				.labels {
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+
+				.warning {
+					font-size: 0.7em;
+					font-weight: 700;
+					color: hsl(354, 84%, 57%);
+					display: none;
+				}
+
+				.invalid {
+					border: 1px solid hsl(354, 84%, 57%);
+				}
+			}
+		}
+
+		.options {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 3em;
+
+			.option {
+				padding: 15px;
+				border-radius: 10px;
+				border: 1px solid hsl(229, 24%, 87%);
+				width: 25%;
+
+				&:hover {
+					border-color: hsl(213, 96%, 18%);
+				}
+
+				.details {
+					margin-top: 3em;
+
+					h4 {
+						color: hsl(213, 96%, 18%);
+					}
+
+					p {
+						margin-top: 5px;
+					}
+				}
+			}
+
+			.selected {
+				border: 1px solid hsl(213, 96%, 18%);
+				background-color: hsl(217, 100%, 97%);
+			}
+
+			.bonus {
+				display: none;
+				color: hsl(213, 96%, 18%);
+				font-size: 0.8em;
+			}
+		}
+
+		.toggle {
+			margin-top: 2em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 30px;
+			color: hsl(231, 11%, 63%);
+			border-radius: 10px;
+			background-color: hsl(231, 100%, 99%);
+			padding: 15px;
+
+			.toggled {
+				color: hsl(213, 96%, 18%);
+			}
+
+			.toggleBtn {
+				background-color: hsl(213, 96%, 18%);
+				width: 40px;
+				height: 20px;
+				border-radius: 30px;
+				position: relative;
+
+				&::before {
+					content: '';
+					position: absolute;
+					width: 12px;
+					height: 12px;
+					left: 4px;
+					top: 4px;
+					background-color: white;
+					border-radius: 100%;
+					transition: 0.5s ease;
+				}
+			}
+
+			.monthly,
+			.yearly {
+				transition: 0.3s;
+			}
+
+			.yearlyToggle {
+
+				&::before {
+					transform: translateX(20px);
+				}
+			}
+		}
+
+		.add-ons {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 15px;
+			flex-direction: column;
+			margin-top: 2em;
+			font-size: 0.9em;
+
+			.add-on {
+				border-radius: 10px;
+				border: 1px solid #dbdbdb;
+				width: 90%;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				padding: 20px;
+
+				.hidden-price {
+					display: none;
+				}
+
+				&:hover input ~ .checkmark {
+					background-color: rgba(0, 0, 0, 0.05);
+				}
+
+				.checkbox {
+					position: relative;
+					display: block;
+					cursor: pointer;
+					user-select: none;
+					width: 20px;
+					height: 20px;
+
+					input {
+						opacity: 0;
+						height: 0;
+						width: 0;
+						cursor: pointer;
+						position: absolute;
+
+						&:checked ~ .checkmark {
+							background-color: hsl(243, 100%, 62%);
+							border: none;
+						}
+
+						&:checked ~ .checkmark::after {
+							display: block;
+						}
+					}
+
+					.checkmark {
+						width: 20px;
+						height: 20px;
+						border: 1px solid #ddd;
+						background-color: white;
+						border-radius: 4px;
+						position: absolute;
+						inset: 0;
+
+						&::after {
+							content: '';
+							position: absolute;
+							inset: 0;
+							display: none;
+							background-image: url(../assets/images/icon-checkmark.svg);
+							background-repeat: no-repeat;
+							background-position: center;
+						}
+					}
+				}
+
+				.text {
+					width: 50%;
+				}
+
+				h3 {
+					color: hsl(213, 96%, 18%);
+				}
+
+				.price {
+					color: hsl(243, 100%, 62%);
+				}
+			}
+
+			.addon-selected {
+				border: 1px solid hsl(243, 100%, 62%);
+				background-color: hsl(217, 100%, 97%);
+			}
+		}
+
+		.main-content:nth-child(3) {
+
+			.controlBtns {
+				margin-top: 0.5em;
+			}
+		}
+
+		.summary {
+			margin-top: 2em;
+
+
+			.items {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				gap: 20px;
+				border-radius: 10px;
+				padding: 20px;
+				background-color: hsl(217, 100%, 97%);
+
+				.additional,
+				.item,
+				.billing {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					width: 100%;
+				}
+
+				.additionals {
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					gap: 20px;
+				}
+
+				.billing {
+					border-bottom: 2px solid hsl(229, 24%, 87%);
+					padding-bottom: 1.5em;
+
+					h4 {
+						color: hsl(213, 96%, 18%);
+						margin-bottom: 3px;
+					}
+
+					.price {
+						color: hsl(213, 96%, 18%);
+						font-weight: bolder;
+					}
+
+					a {
+						font-size: 0.95em;
+						color: hsl(231, 11%, 63%);
+
+						&:hover {
+							color: hsl(243, 100%, 62%);
+						}
+					}
+				}
+
+				.additional {
+					.name {
+						font-size: 0.9em;
+						color: hsl(231, 11%, 63%);
+					}
+
+					.price {
+						color: hsl(213, 96%, 18%);
+						font-size: 0.9em;
+						font-weight: 500;
+					}
+				}
+			}
+
+			.total {
+				margin: auto;
+				margin-top: 1.5em;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 90%;
+
+				.name {
+					color: hsl(231, 11%, 63%);
+					font-size: 0.9em;
+				}
+
+				h2 {
+					color: hsl(243, 100%, 62%);
+				}
+			}
+		}
+
+		.step:nth-child(4) {
+			.controlBtns {
+				margin-top: 2.5em;
+
+				.nextBtn {
+					background-color: hsl(243, 100%, 62%);
+
+					&:hover {
+						background-color: #867fff;
+					}
+				}
+			}
+		}
+
+		.thank-you {
+			text-align: center;
+			width: 90%;
+			margin-top: 4em;
+
+			h1 {
+				color: hsl(213, 96%, 18%);
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
+			}
+
+			p {
+				line-height: 1.5;
+			}
+		}
+
+		.hiddenBillingPrice {
+			display: none;
+		}
+	}
+
+	.visible {
+		display: block !important;
+	}
+
+	.hidden {
+		display: none !important;
+	}
+}
+
+footer {
+
+	.attribution {
+		font-size: 11px;
+		text-align: center;
+	}
+
+	.attribution a {
+		color: hsl(228, 45%, 44%);
+	}
+}
+
+@media screen and (max-width: 375px) {
+	body {
+		justify-content: space-between;
+		height: unset;
+	}
+
+	.card {
+		flex-direction: column;
+		background-color: transparent;
+		padding: 0;
+		position: relative;
+
+		aside {
+			width: 100%;
+			height: fit-content;
+
+			img {
+				width: 100%;
+			}
+
+			.steps {
+				flex-direction: row;
+				padding: 3em 0 6em 0;
+				margin: auto;
+				width: fit-content;
+				font-size: 1.1em;
+
+				.text {
+					display: none !important;
+				}
+			}
+		}
+
+		main {
+			width: 300px;
+			height: fit-content;
+			padding: 20px;
+			padding-top: 2em;
+			font-size: 0.9em;
+			overflow: hidden;
+			position: absolute;
+			top: 22%;
+			background-color: white;
+			border-radius: 15px;
+			box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+
+			header {
+				font-size: 0.9em;
+			}
+
+			.form-group {
+				width: 100% !important;
+
+				input {
+					width: 90% !important;
+				}
+			}
+		}
+	}
+
+	.cardControl {
+		margin-top: 3em;
+		width: 300px;
+
+		button {
+			margin: unset;
+		}
+
+		.cardNextBtn {
+			margin-left: auto;
+		}
+	}
+
+	.cardNextBtn,
+	.cardPrevBtn {
+		display: block;
+	}
+}
+
+button {
+	font-family: inherit;
+	padding: 1em 1.7em;
+	background-color: hsl(213, 96%, 18%);
+	color: white;
+	border: none;
+	font-weight: 500;
+	border-radius: 7px;
+}
+
+.controlBtns {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1em;
+}
+
+.prevBtn {
+	background-color: white;
+	margin-right: auto;
+	color: hsl(231, 11%, 63%);
+	cursor: pointer;
+}
+
+.nextBtn {
+	transition: 0.4s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #08438d;
+	}
+}
+
+.cardNextBtn,
+.cardPrevBtn {
+	display: none;
+}

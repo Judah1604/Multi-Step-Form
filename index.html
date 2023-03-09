@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+	<title>Frontend Mentor | Multi-step form</title>
+	<link rel="stylesheet" href="Files/styles.css">
+</head>
+
+<body>
+	<div class="card">
+		<aside>
+			<img src="assets/images/bg-sidebar-desktop.svg" alt="Sidebar background" class="sidebar-background">
+			<div class="steps">
+				<div class="step-count active">
+					<div class="number">1</div>
+					<div class="text">
+						<p>Step 1</p>
+						<h3>Your Info</h3>
+					</div>
+				</div>
+				<div class="step-count">
+					<div class="number">2</div>
+					<div class="text">
+						<p>Step 2</p>
+						<h3>Select Plan</h3>
+					</div>
+				</div>
+				<div class="step-count">
+					<div class="number">3</div>
+					<div class="text">
+						<p>Step 3</p>
+						<h3>Add-ons</h3>
+					</div>
+				</div>
+				<div class="step-count">
+					<div class="number">4</div>
+					<div class="text">
+						<p>Step 4</p>
+						<h3>Summary</h3>
+					</div>
+				</div>
+			</div>
+		</aside>
+		<main>
+			<div class="main-content step visible">
+				<header>
+					<h1>Personal info</h1>
+				</header>
+				<p>Please provide your name, email address, and phone number.</p>
+
+				<form action="#">
+					<div class="form-group">
+						<div class="labels">
+							<label for="fullname">Name</label>
+							<div class="warning">This field is required</div>
+						</div>
+						<input type="text" placeholder="e.g. Stephen King" id="fullname" class="input">
+					</div>
+
+					<div class="form-group">
+						<div class="labels">
+							<label for="email">Email Address</label>
+							<div class="warning">This field is required</div>
+						</div>
+						<input type="email" placeholder="e.g. stephenking@lorem.com" id="email" class="input">
+					</div>
+
+					<div class="form-group">
+						<div class="labels">
+							<label for="number">Phone Number</label>
+							<div class="warning">This field is required</div>
+						</div>
+						<input type="text" placeholder="e.g. +1 234 567 890" id="number" class="input">
+					</div>
+
+					<div class="form-group">
+						<button type="button" class="nextBtn">Next Step</button>
+					</div>
+				</form>
+			</div>
+			<div class="main-content step hidden">
+				<header>
+					<h1>Select your plan</h1>
+				</header>
+				<p>You have the option of monthly or yearly billing.</p>
+
+				<div class="options">
+					<div class="option selected">
+						<img src="assets/images/icon-arcade.svg" alt="Arcade">
+						<div class="details">
+							<h4>Arcade</h4>
+							<p class="planPrice">$9/mo</p>
+							<p class="bonus">2 months free</p>
+							<div class="hiddenBillingPrice">9</div>
+						</div>
+					</div>
+					<div class="option">
+						<img src="assets/images/icon-advanced.svg" alt="Advanced">
+						<div class="details">
+							<h4>Advanced</h4>
+							<p class="planPrice">$12/mo</p>
+							<p class="bonus">2 months free</p>
+							<div class="hiddenBillingPrice">12</div>
+						</div>
+					</div>
+					<div class="option">
+						<img src="assets/images/icon-pro.svg" alt="Pro">
+						<div class="details">
+							<h4>Pro</h4>
+							<p class="planPrice">$15/mo</p>
+							<p class="bonus">2 months free</p>
+							<div class="hiddenBillingPrice">15</div>
+						</div>
+					</div>
+				</div>
+				<div class="toggle">
+					<h4 class="monthly toggled">Monthly</h4>
+					<div class="toggleBtn"></div>
+					<h4 class="yearly">Yearly</h4>
+				</div>
+				<div class="controlBtns">
+					<button type="button" class="prevBtn">Go back</button>
+					<button type="submit" class="nextBtn">Next Step</button>
+				</div>
+			</div>
+			<div class="main-content step hidden">
+				<header>
+					<h1>Pick add-ons</h1>
+				</header>
+				<p>Add-ons help enhance your gaming experience.</p>
+				<div class="add-ons">
+					<div class="add-on">
+						<div class="checkbox">
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</div>
+						<div class="text">
+							<h3>Online service</h3>
+							<p>Access to multiplayer games</p>
+							<div class="hidden-price">1</div>
+						</div>
+						<div class="price addon-price">
+							+$1/mo
+						</div>
+					</div>
+					<div class="add-on">
+						<div class="checkbox">
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</div>
+						<div class="text">
+							<h3>Larger storage</h3>
+							<p>Extra 1TB of cloud save</p>
+							<div class="hidden-price">2</div>
+						</div>
+						<div class="price addon-price">
+							+$2/mo
+						</div>
+					</div>
+					<div class="add-on">
+						<div class="checkbox">
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</div>
+						<div class="text">
+							<h3>Customizable Profile</h3>
+							<p>Custom theme on your profile</p>
+							<div class="hidden-price">2</div>
+						</div>
+						<div class="price addon-price">
+							+$2/mo
+						</div>
+					</div>
+				</div>
+				<div class="controlBtns">
+					<button type="button" class="prevBtn">Go back</button>
+					<button type="submit" class="nextBtn lastNextBtn">Next Step</button>
+				</div>
+			</div>
+			<div class="main-content step hidden">
+				<header>
+					<h1>Finishing up</h1>
+				</header>
+				<p>Double-check everything looks OK before confirming.</p>
+				<div class="summary">
+					<div class="items">
+						<div class="billing">
+
+						</div>
+						<div class="additionals">
+						
+						</div>
+					</div>
+					<div class="total">
+						<div class="name">Total (per month)</div>
+						<div class="totalPrice">
+							<h2>$12/mo</h2>
+						</div>
+					</div>
+				</div>
+				<div class="controlBtns">
+					<button type="button" class="prevBtn">Go back</button>
+					<button type="submit" class="nextBtn">Confirm</button>
+				</div>
+			</div>
+			<div class="step hidden thank-you">
+				<img src="assets/images/icon-thank-you.svg" alt="Thank you">
+				<h1>Thank you!</h1>
+				<p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+			</div>
+		</main>
+		<div class="controlBtns cardControl">
+			<button type="submit" class="nextBtn cardNextBtn">Next Step</button>
+			<button type="button" class="prevBtn cardPrevBtn">Go back</button>
+		</div>
+	</div>
+	<footer>
+		<div class="attribution">
+			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+			Coded by <a href="https://www.frontendmentor.io/profile/Judah1604">Judah1604</a>.
+		</div>
+	</footer>
+</body>
+<script src="main.js"></script>
+
+</html>
