@@ -341,7 +341,7 @@ body {
                   user-select: none;
           width: 20px;
           height: 20px;
-          overflow: hidden;
+          padding: 1px;
           }
           /* line 294, styles.scss */
           .card main .add-ons .add-on .checkbox input {
